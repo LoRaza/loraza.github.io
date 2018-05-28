@@ -6,14 +6,14 @@ import React from 'react';
 /**
  * Local import
  */
-import Light from 'src/containers/Light';
+import Header from 'src/components/Header/Header';
 
 /**
  * Code
  */
 const App = () => (
-  <div id="app">Hello World
-    <Light />
+  <div id="app">
+    <Header id="header" />
   </div>
 );
 

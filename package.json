@@ -31,7 +31,10 @@
     "stylus-brunch": "^2.10.0"
   },
   "dependencies": {
+    "@material-ui/core": "^1.1.0",
+    "antd": "^3.5.4",
     "babel-polyfill": "^6.26.0",
+    "feather-icons": "^4.7.3",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
