@@ -15,12 +15,12 @@ import Avatar from '@material-ui/core/Avatar';
  * Code
  */
 const Header = () => (
-  <div id="app">
+  <header id="header">
     <TextField
       id="search"
       label="Search Profils"
       type="search"
-      margin="normal"
+      margin="none"
     />
 
     <div id="buttons">
@@ -33,7 +33,7 @@ const Header = () => (
     </div>
     <Avatar id="avatar" alt="USER" src="https://picsum.photos/200/300" />
 
-  </div>
+  </header>
 );
 
 /**
