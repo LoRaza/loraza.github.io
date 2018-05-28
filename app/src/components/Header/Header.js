@@ -22,6 +22,7 @@ const Header = () => (
       type="search"
       margin="normal"
     />
+
     <div id="buttons">
       <Button variant="raised" color="primary" id="logIn-button">
         Login
@@ -30,7 +31,7 @@ const Header = () => (
         SignIn
       </Button>
     </div>
-    <Avatar alt="Remy Sharp" src="images/animal.jpg" />
+    <Avatar id="avatar" alt="USER" src="https://picsum.photos/200/300" />
 
   </div>
 );
