@@ -31,7 +31,7 @@ const Header = () => (
           Login
         </Button>
       </Popover>
-      <SimpleModalWrapped id="signIn-button" />
+      <SimpleModalWrapped id="signUp-button" />
     </div>
     <Avatar id="avatar" alt="USER" src="https://picsum.photos/200/300" />
   </header>

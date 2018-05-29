@@ -56,7 +56,7 @@ class SimpleModal extends React.Component {
      return (
        <div>
          <Button onClick={this.handleOpen} variant="raised" color="primary" id="signIn-button">
-           SignIn
+           SignUp
          </Button>
          <Modal
            aria-labelledby="simple-modal-title"
