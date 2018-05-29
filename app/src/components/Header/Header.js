@@ -9,7 +9,7 @@ import Avatar from '@material-ui/core/Avatar';
 /**
  * Local import
  */
-
+import SimpleModalWrapped from 'src/components/Modal/Modal';
 
 /**
  * Code
@@ -27,12 +27,9 @@ const Header = () => (
       <Button variant="raised" color="primary" id="logIn-button">
         Login
       </Button>
-      <Button variant="raised" color="primary" id="signIn-button">
-        SignIn
-      </Button>
+      <SimpleModalWrapped id="signIn-button" />
     </div>
     <Avatar id="avatar" alt="USER" src="https://picsum.photos/200/300" />
-
   </header>
 );
 

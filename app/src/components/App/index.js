@@ -14,7 +14,7 @@ import RegisterForm from 'src/components/RegisterForm';
 const App = () => (
   <div id="app">
     <Header id="header" />
-    <RegisterForm />
+
   </div>
 );
 
