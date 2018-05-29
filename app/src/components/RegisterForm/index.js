@@ -3,6 +3,8 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import FaClose from 'react-icons/lib/fa/close'
+
 
 /**
  * Local import
@@ -34,6 +36,11 @@ import PropTypes from 'prop-types';
 //   render() {
 const Register = () => (
   <div id="register-form">
+    <div className="align-right">
+      <FaClose
+        className="close"
+      />
+    </div>
     <h2>Create your account to start building your CV or Portfolio</h2>
     <form
       action="index.html"
