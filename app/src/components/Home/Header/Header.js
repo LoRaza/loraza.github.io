@@ -10,7 +10,7 @@ import { Popover } from 'antd';
 /**
  * Local import
  */
-import SimpleModalWrapped from 'src/components/Modal/Modal';
+import SimpleModalWrapped from 'src/components/Home/Modal/Modal';
 import LoginForm from '../LoginForm/LoginForm';
 /**
  * Code

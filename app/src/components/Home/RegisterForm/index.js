@@ -41,7 +41,7 @@ const Register = () => (
         className="close"
       />
     </div>
-    <h2>Create your account to start building your CV or Portfolio</h2>
+    <h2 className="form-title">Create your account to start building your CV or Portfolio</h2>
     <form
       action="index.html"
       // onSubmit={submit}
