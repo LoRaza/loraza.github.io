@@ -21,30 +21,42 @@ const ProfileBuilder = () => (
     <div className="half-block-input">
       <label className="firstname-label">
         Firstname :
-        <input type="text" className="firstname-input"/>
+        <input type="text" className="firstname-input" />
       </label>
       <label className="lastname-label">
         Lastname :
-        <input type="text" className="lastname-input"/>
+        <input type="text" className="lastname-input" />
       </label>
     </div>
     <label className="birthday-label">
-      <input type="date"/>
+      Birthday
+      <input type="date" />
     </label>
     <label className="adress-label">
       Adress :
-      <input type="text" className="adress-input"/>
+      <input type="text" className="adress-input" />
     </label>
     <div className="half-block-input">
       <label className="mail-label">
         Mail :
-        <input type="mail" className ="mail-input"/>
+        <input type="mail" className="mail-input" />
       </label>
       <label className="phone-label">
         Phone :
-        <input type="tel" className="phone-input"/>
+        <input type="tel" className="phone-input" />
       </label>
     </div>
+    <div className="half-block-input">
+      <label className="old-password-label">
+        Old password :
+        <input type="password" className="old-password-input" />
+      </label>
+      <label className="new-password-label">
+        New password :
+        <input type="password" className="new-password-input" />
+      </label>
+    </div>
+
   </form>
 </div>
 );

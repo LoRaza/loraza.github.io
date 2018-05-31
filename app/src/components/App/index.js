@@ -7,7 +7,7 @@ import React from 'react';
  * Local import
  */
 
-import Header from 'src/components/Header/Header';
+import Header from 'src/components/Home/Header/Header';
 import HomeIntro from 'src/components/Home/HomeIntro';
 import Title from 'src/components/Home/Title';
 import Footer from 'src/components/Home/Footer';
