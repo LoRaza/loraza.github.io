@@ -18,4 +18,4 @@ const PortfolioBuilder =() => (
 /**
  * Export
  */
-export default PortfolioBuilde;
+export default PortfolioBuilder;

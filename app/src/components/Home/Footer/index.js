@@ -2,7 +2,7 @@
  * NPM import
  */
 import React from 'react';
-
+import { NavLink } from 'react-router-dom';
 /**
  * Local import
  */
@@ -20,6 +20,11 @@ const Footer = () => (
     <button className="cta">
       Discover last profiles >
     </button>
+    <nav id="nav-dev">
+      <NavLink className="nav-dev-link" exact to="/cvbuilder">CV Builder</NavLink>
+      <NavLink className="nav-dev-link" exact to="/profilebuilder">Profile Builder</NavLink>
+      <NavLink className="nav-dev-link" exact to="/portfoliobuilder">Portfolio Builder</NavLink>
+    </nav>
   </div>
 );
 
