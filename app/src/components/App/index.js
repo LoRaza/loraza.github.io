@@ -6,6 +6,7 @@ import React from 'react';
 /**
  * Local import
  */
+
 import Header from 'src/components/Home/Header/Header';
 import Intro2 from 'src/components/Home/Intro2';
 import Title from 'src/components/Home/Title';
