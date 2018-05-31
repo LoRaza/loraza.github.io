@@ -2,15 +2,15 @@
 
 #register-form
   height: 50vh
-  width: 50vw
+  width: calc(33vw + 1px)
   border: 3px solid $color-primary
-  border-radius: 1em
   position: fixed
-  top: 50% - 25vh
-  left: 50% - 25vw
+  top: 20vh
+  left: calc(33vw - 1px)
   padding: 2em
   text-align: left
   background-color: $color-secondary
+  border-radius: 3px
 
 .align-right
   text-align: right
@@ -20,10 +20,11 @@
   font-size: 2em
   color: $color-primary
   cursor: pointer
+  margin-bottom: 1em
 
 .form-title
   font-size: 2em
-  margin-bottom: 1em
+  margin-bottom: 2em
   text-align: center
   color: $color-primary
 
@@ -56,3 +57,6 @@ button
   text-align: left
   display: flex
   justify-content: space-between
+
+.MuiBackdrop-root-60
+  background-color: rgba(#111, .8) !important
