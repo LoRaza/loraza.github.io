@@ -144,7 +144,6 @@ function SimpleExpansionPanel(props) {
               </Col>
             </FormGroup>
             <Button size="lg" block>+ Add Item</Button>
-            <Slider value={value} min={0} max={6} step={1} onChange={this.handleChange} />
           </Form>
         </ExpansionPanelDetails>
       </ExpansionPanel>
