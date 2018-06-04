@@ -90,14 +90,7 @@ function SimpleExpansionPanel(props) {
             </FormGroup>
             <FormGroup row>
               <Col sm={12}>
-                <Label for="exampleSelect" id="labels">Skills Learned</Label>
-                <Input type="select" Size="lg" name="select" id="forms"placeholder="Skills">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </Input>
+                <Input type="textarea" name="text" id="exampleText" placeholder="Skills Used" />
               </Col>
             </FormGroup>
             <Button size="lg" block>+ Add Item</Button>
@@ -118,14 +111,7 @@ function SimpleExpansionPanel(props) {
             </FormGroup>
             <FormGroup row>
               <Col sm={12}>
-                <Label for="exampleSelect" id="labels">Skills Used</Label>
-                <Input type="select" Size="lg" name="select" id="forms"placeholder="Skills">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </Input>
+                <Input type="textarea" name="text" id="exampleText" placeholder="Skills Used" />
               </Col>
             </FormGroup>
             <Button size="lg" block>+ Add Item</Button>
