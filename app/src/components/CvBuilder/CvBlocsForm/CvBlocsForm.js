@@ -9,9 +9,8 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import TextField from '@material-ui/core/TextField';
-import Columns from 'grommet/components/Columns';
-import Box from 'grommet/components/Box';
+import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import Slider from '@material-ui/lab/Slider';
 /**
  * Local import
  */
@@ -23,7 +22,7 @@ import Box from 'grommet/components/Box';
 
 const styles = theme => ({
   root: {
-    width: '20%',
+    width: '45%',
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -40,61 +39,113 @@ function SimpleExpansionPanel(props) {
           <Typography className={classes.heading}>Bio</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails id="bio">
-          <Columns size="small"
-            masonry>
-            <Box align="center"
-              pad="medium"
-              margin="small"
-              colorIndex="light-2">
-              <TextField label="Nom" />
-            </Box>
-            <Box align="center"
-              pad="medium"
-              margin="small"
-              colorIndex="light-2">
-              <TextField label="Prénom" />
-            </Box>
-            <Box align="center"
-              pad="medium"
-              margin="small"
-              colorIndex="light-2">
-              <TextField label="Email" />
-              <Box align="center"
-                pad="medium"
-                margin="small"
-                colorIndex="light-2">
-                <TextField label="Adresse" />
-              </Box>
-              <Box align="center"
-                pad="medium"
-                margin="small"
-                colorIndex="light-2">
-                <TextField label="Téléphone" />
-              </Box>
-              <Box align="center"
-                pad="medium"
-                margin="small"
-                colorIndex="light-2">
-                <TextField label="Date de naissance" />
-              </Box>
-            </Box>
-          </Columns>
+          <Form id="bio-form">
+            <FormGroup row>
+              <Col sm={6} >
+                <Input type="firstname" name="firstname" id="examplePassword" placeholder="Firstname" />
+              </Col>
+              <Col sm={6}>
+                <Input type="Lastname" name="Lastname" id="examplePassword" placeholder="Lastname" />
+              </Col>
+            </FormGroup>
+            <FormGroup row>
+              <Col sm={12}>
+                <Input type="Lastname" name="Lastname" id="examplePassword" placeholder="Lastname" />
+              </Col>
+            </FormGroup>
+            <FormGroup row>
+              <Col sm={{ size: 6, order: 2, offset: 1 }}>
+                <Input type="Birthday" name="Birthday" id="examplePassword" placeholder="Birthday" />
+              </Col>
+            </FormGroup>
+            <FormGroup row>
+              <Col sm={12}>
+                <Input type="Adress" name="Adress" id="examplePassword" placeholder="Adress" />
+              </Col>
+            </FormGroup>
+            <FormGroup row>
+              <Col sm={6}>
+                <Input type="Phone" name="Phone" id="examplePassword" placeholder="Phone" />
+              </Col>
+              <Col sm={6}>
+                <Input type="Mail" name="Mail" id="examplePassword" placeholder="Mail" />
+              </Col>
+            </FormGroup>
+            <Button size="lg" block>Submit</Button>
+          </Form>
+
         </ExpansionPanelDetails>
       </ExpansionPanel>
       <ExpansionPanel>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography className={classes.heading}>Bloc-skill</Typography>
+          <Typography className={classes.heading}>Graduations</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Columns size="small"
-            masonry>
-            <Box align="center"
-              pad="medium"
-              margin="small"
-              colorIndex="light-2">
-              <TextField label="Skill" />
-            </Box>
-          </Columns>
+          <Form id="bio-form">
+            <FormGroup row>
+              <Col sm={12} >
+                <Input type="firstname" Size="lg" name="firstname" id="forms" placeholder="Diploma" />
+                <Input type="Lastname" Size="lg" name="Lastname" id="forms" placeholder="Year" />
+              </Col>
+            </FormGroup>
+            <FormGroup row>
+              <Col sm={12}>
+                <Label for="exampleSelect" id="labels">Skills Learned</Label>
+                <Input type="select" Size="lg" name="select" id="forms"placeholder="Skills">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </Input>
+              </Col>
+            </FormGroup>
+            <Button size="lg" block>+ Add Item</Button>
+          </Form>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+      <ExpansionPanel>
+        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography className={classes.heading}>Experiences</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Form id="bio-form">
+            <FormGroup row>
+              <Col sm={12} >
+                <Input type="firstname" Size="lg" name="firstname" id="forms" placeholder="Job" />
+                <Input type="Lastname" Size="lg" name="Lastname" id="forms" placeholder="Year" />
+              </Col>
+            </FormGroup>
+            <FormGroup row>
+              <Col sm={12}>
+                <Label for="exampleSelect" id="labels">Skills Used</Label>
+                <Input type="select" Size="lg" name="select" id="forms"placeholder="Skills">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </Input>
+              </Col>
+            </FormGroup>
+            <Button size="lg" block>+ Add Item</Button>
+          </Form>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+      <ExpansionPanel>
+        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography className={classes.heading}>Skills</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Form id="bio-form">
+            <FormGroup row>
+              <Col sm={12} >
+                <Input type="firstname" Size="lg" name="firstname" id="forms" placeholder="Skills/Software" />
+              </Col>
+            </FormGroup>
+            <Button size="lg" block>+ Add Item</Button>
+            <Slider value={value} min={0} max={6} step={1} onChange={this.handleChange} />
+          </Form>
         </ExpansionPanelDetails>
       </ExpansionPanel>
     </div>
