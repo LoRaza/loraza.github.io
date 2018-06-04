@@ -42,33 +42,33 @@ function SimpleExpansionPanel(props) {
           <Form id="bio-form">
             <FormGroup row>
               <Col sm={6} >
-                <Input type="firstname" name="firstname" id="examplePassword" placeholder="Firstname" />
+                <Input className=".background-form" type="firstname" name="firstname" placeholder="Firstname" />
               </Col>
               <Col sm={6}>
-                <Input type="Lastname" name="Lastname" id="examplePassword" placeholder="Lastname" />
+                <Input className=".background-form" type="Lastname" name="Lastname" placeholder="Lastname" />
               </Col>
             </FormGroup>
             <FormGroup row>
               <Col sm={12}>
-                <Input type="Lastname" name="Lastname" id="examplePassword" placeholder="Lastname" />
+                <Input className=".background-form" type="Lastname" name="Lastname" placeholder="Lastname" />
               </Col>
             </FormGroup>
             <FormGroup row>
               <Col sm={{ size: 6, order: 2, offset: 1 }}>
-                <Input type="Birthday" name="Birthday" id="examplePassword" placeholder="Birthday" />
+                <Input className=".background-form" type="Birthday" name="Birthday" placeholder="Birthday" />
               </Col>
             </FormGroup>
             <FormGroup row>
               <Col sm={12}>
-                <Input type="Adress" name="Adress" id="examplePassword" placeholder="Adress" />
+                <Input className=".background-form" type="Adress" name="Adress" placeholder="Adress" />
               </Col>
             </FormGroup>
             <FormGroup row>
               <Col sm={6}>
-                <Input type="Phone" name="Phone" id="examplePassword" placeholder="Phone" />
+                <Input className=".background-form" type="Phone" name="Phone" placeholder="Phone" />
               </Col>
               <Col sm={6}>
-                <Input type="Mail" name="Mail" id="examplePassword" placeholder="Mail" />
+                <Input className=".background-form" type="Mail" name="Mail" placeholder="Mail" />
               </Col>
             </FormGroup>
             <Button size="lg" block>Submit</Button>
@@ -84,13 +84,13 @@ function SimpleExpansionPanel(props) {
           <Form id="bio-form">
             <FormGroup row>
               <Col sm={12} >
-                <Input type="firstname" Size="lg" name="firstname" id="forms" placeholder="Diploma" />
-                <Input type="Lastname" Size="lg" name="Lastname" id="forms" placeholder="Year" />
+                <Input className=".background-form" type="firstname" Size="lg" name="firstname" id="forms" placeholder="Diploma" />
+                <Input className=".background-form" type="Lastname" Size="lg" name="Lastname" id="forms" placeholder="Year" />
               </Col>
             </FormGroup>
             <FormGroup row>
               <Col sm={12}>
-                <Input type="textarea" name="text" id="exampleText" placeholder="Skills Used" />
+                <Input className=".background-form" type="textarea" name="text" id="exampleText" placeholder="Skills Used" />
               </Col>
             </FormGroup>
             <Button size="lg" block>+ Add Item</Button>
@@ -105,13 +105,13 @@ function SimpleExpansionPanel(props) {
           <Form id="bio-form">
             <FormGroup row>
               <Col sm={12} >
-                <Input type="firstname" Size="lg" name="firstname" id="forms" placeholder="Job" />
-                <Input type="Lastname" Size="lg" name="Lastname" id="forms" placeholder="Year" />
+                <Input className=".background-form" type="firstname" Size="lg" name="firstname" id="forms" placeholder="Job" />
+                <Input className=".background-form" type="Lastname" Size="lg" name="Lastname" id="forms" placeholder="Year" />
               </Col>
             </FormGroup>
             <FormGroup row>
               <Col sm={12}>
-                <Input type="textarea" name="text" id="exampleText" placeholder="Skills Used" />
+                <Input className=".background-form" type="textarea" name="text" id="exampleText" placeholder="Skills Used" />
               </Col>
             </FormGroup>
             <Button size="lg" block>+ Add Item</Button>
@@ -126,7 +126,7 @@ function SimpleExpansionPanel(props) {
           <Form id="bio-form">
             <FormGroup row>
               <Col sm={12} >
-                <Input type="firstname" Size="lg" name="firstname" id="forms" placeholder="Skills/Software" />
+                <Input className=".background-form" type="firstname" Size="lg" name="firstname" id="forms" placeholder="Skills/Software" />
               </Col>
             </FormGroup>
             <Button size="lg" block>+ Add Item</Button>
