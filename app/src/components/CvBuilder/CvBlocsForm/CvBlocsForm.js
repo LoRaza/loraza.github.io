@@ -129,7 +129,14 @@ function SimpleExpansionPanel(props) {
                 <Input className=".background-form" type="firstname" Size="lg" name="firstname" id="forms" placeholder="Skills/Software" />
               </Col>
             </FormGroup>
-            <Button size="lg" block>+ Add Item</Button>
+            <FormGroup row>
+              <Col sm={6} >
+                <Button outline size="lg" block color="secondary">Add icon from library +</Button>
+              </Col>
+              <Col sm={6}>
+                <Button size="lg" block>+ Add Item</Button>
+              </Col>
+            </FormGroup>
           </Form>
         </ExpansionPanelDetails>
       </ExpansionPanel>

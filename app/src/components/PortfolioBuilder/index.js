@@ -2,23 +2,44 @@
  *NPM import
  */
 import React from 'react';
-import PropTypes from 'prop-types';
-
+import ReactDOM from 'react-dom';
 /**
  * Local import
  */
-import CvBlocsForm from 'src/components/CvBuilder/CvBlocsForm/CvBlocsForm';
+import datas from './portfoliosDatas';
 /*
  * Code
  */
-const PortfolioBuilder = () => (
-  <div>
-    <div id="test">top kek</div>
-    <CvBlocsForm />
-  </div>
-);
+const Test = { ...datas };
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      clicked: false,
+    };
+  }
 
+   imageClick = () => {
+     console.log(Test);
+     this.setState({
+       clicked: true,
+     });
+   }
+
+   render() {
+     return (
+       <div>
+         <img src={ this.props.url } onClick={this.imageClick} />
+         {
+           this.state.clicked &&
+           <div>You clicked me!</div>
+         }
+       </div>
+     );
+   }
+}
+
+ReactDOM.render(<MyComponent url={Test[0]} />, document.body);
 /**
  * Export
  */
-export default PortfolioBuilder;
