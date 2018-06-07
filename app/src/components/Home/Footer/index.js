@@ -24,6 +24,7 @@ const Footer = () => (
       <NavLink className="nav-dev-link" exact to="/cvbuilder">CV Builder</NavLink>
       <NavLink className="nav-dev-link" exact to="/profilebuilder">Profile Builder</NavLink>
       <NavLink className="nav-dev-link" exact to="/portfoliobuilder">Portfolio Builder</NavLink>
+      <NavLink className="nav-dev-link" exact to="/testCV">Test CV</NavLink>
     </nav>
   </div>
 );

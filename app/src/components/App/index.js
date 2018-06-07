@@ -15,6 +15,7 @@ import CvBuilder from 'src/components/CvBuilder';
 import PortfolioBuilder from 'src/components/PortfolioBuilder';
 import ProfileBuilder from 'src/components/ProfileBuilder';
 import CvBlocsForm from 'src/components/CvBuilder/CvBlocsForm/CvBlocsForm';
+import CvUser from 'src/components/CvUser';
 /**
  * Code
  */
@@ -39,6 +40,7 @@ const App = () => (
       <Route path="/portfoliobuilder" component={PortfolioBuilder} />
       <Route path="/profilebuilder" component={ProfileBuilder} />
       <Route path="/cvblocsform" component={CvBlocsForm} />
+      <Route path="/testcv" component={CvUser} />
     </div>
   </div>
 
