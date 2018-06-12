@@ -15,7 +15,7 @@ import CvBuilder from 'src/components/CvBuilder';
 import PortfolioBuilder from 'src/components/PortfolioBuilder';
 import ProfileBuilder from 'src/components/ProfileBuilder';
 import CvBlocsForm from 'src/components/CvBuilder/CvBlocsForm/CvBlocsForm';
-import CvUser from 'src/components/CvUser';
+import CvUser from 'src/containers/CvUser';
 /**
  * Code
  */
