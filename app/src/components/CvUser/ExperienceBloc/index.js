@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 /**
  * Local import
  */
-import XpBloc from 'src/components/CvUser/XpBloc';
+import XpBloc from 'src/containers/XpBloc';
 
 /**
  * Code

@@ -24,6 +24,7 @@ class CvUser extends React.Component {
   render() {
     const switchIconPanel = classNames(this.props.togglePanel ? 'fas fa-angle-right' : 'fas fa-angle-left');
     const togglePanelClass = classNames({ 'toggle-panel': this.props.togglePanel });
+    const toggleCvClass = classNames({ 'toggle-cv': this.props.togglePanel });
     return (
       <div>
         <div id="cv-builder-form" className={togglePanelClass}>
@@ -32,7 +33,7 @@ class CvUser extends React.Component {
           <GraduationForm className={togglePanelClass} />
           <ExperienceForm className={togglePanelClass} />
         </div>
-        <div id="cv-user">
+        <div id="cv-user" className={toggleCvClass}>
           <ProfileBloc />
           <GraduationBloc
             graduations={this.props.graduations}

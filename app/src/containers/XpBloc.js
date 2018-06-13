@@ -12,11 +12,6 @@ import { toggleGradAbstract, toggleExpAbstract } from 'src/store/reducer';
 /**
  * Code
  */
-const mapStateToProps = state => ({
-  togglePanel: state.togglePanel,
-  graduations: state.graduations,
-  experiences: state.experiences,
-});
 
 const mapDispatchToProps = dispatch => ({
   onToggleGradAbstract: id => () => {
@@ -28,7 +23,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const XpBlocContainer = connect(
-  mapStateToProps, // Lecture depuis le state
+  null, // Lecture depuis le state
   mapDispatchToProps, // Écriture dans le state
 )(XpBloc);
 
