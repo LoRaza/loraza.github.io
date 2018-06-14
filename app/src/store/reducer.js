@@ -83,6 +83,8 @@ export const TOGGLE_GRAD = 'TOGGLE_GRAD';
 export const TOGGLE_EXP = 'TOGGLE_EXP';
 export const TOGGLE_PANEL = 'TOGGLE_PANEL';
 export const SAVE_PROFILE = 'SAVE_PROFILE';
+export const DELETE_GRAD = 'DELETE_GRAD';
+export const DELETE_EXP = 'DELETE_EXP'
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
@@ -183,6 +185,23 @@ const reducer = (state = initialState, action = {}) => {
         graduations,
       };
     }
+    case DELETE_GRAD: {
+      // Recup des taches et filtre
+      const graduations = state.graduations.filter(graduation => graduation.id !== action.id);
+      return {
+        ...state,
+        graduations,
+      };
+    }
+
+    case DELETE_EXP: {
+      // Recup des taches et filtre
+      const experiences = state.experiences.filter(experience => experience.id !== action.id);
+      return {
+        ...state,
+        experiences,
+      };
+    }
 
     case TOGGLE_EXP: {
       // Récupérer la liste des graduations
@@ -251,6 +270,16 @@ export const toggleGradAbstract = id => ({
 
 export const toggleExpAbstract = id => ({
   type: TOGGLE_EXP,
+  id,
+});
+
+export const deleteGrad = id => ({
+  type: DELETE_GRAD,
+  id,
+});
+
+export const deleteExp = id => ({
+  type: DELETE_EXP,
   id,
 });
 

@@ -32,30 +32,43 @@ class GraduationForm extends React.Component {
       <form
         className="form"
       >
-        <input
-          type="text"
-          name="gradEntitled"
-          className="text-input entitled"
-          placeholder="Graduation"
-          value={this.props.gradEntitled}
-          onChange={this.handleChange}
-        />
-        <input
-          type="text"
-          name="gradYear"
-          className="text-input year"
-          placeholder="Year"
-          value={this.props.gradYear}
-          onChange={this.handleChange}
-        />
-        <input
-          type="text"
-          name="gradAbstract"
-          className="text-input abstract"
-          placeholder="Skills Learned"
-          value={this.props.gradAbstract}
-          onChange={this.handleChange}
-        />
+        <h2 className="builder-title">Graduations</h2>
+        <label htmlFor="gradEntitled">
+          <span className="label-input-text">Entitled</span>
+          <input
+            id="gradEntitled"
+            type="text"
+            name="gradEntitled"
+            className="text-input"
+            placeholder="Graduation"
+            value={this.props.gradEntitled}
+            onChange={this.handleChange}
+          />
+        </label>
+        <label htmlFor="gradYear">
+          <span className="label-input-text">Year</span>
+          <input
+            id="gradYear"
+            type="text"
+            name="gradYear"
+            className="text-input"
+            placeholder="Year"
+            value={this.props.gradYear}
+            onChange={this.handleChange}
+          />
+        </label>
+        <label htmlFor="gradAbstract">
+          <span className="label-input-text">Abstract</span>
+          <textarea
+            id="gradAbstract"
+            type="text"
+            name="gradAbstract"
+            className="text-input textarea-input"
+            placeholder="Skills Learned"
+            value={this.props.gradAbstract}
+            onChange={this.handleChange}
+          />
+        </label>
         <button onClick={this.handleSubmit} className="button-add">Add graduation</button>
       </form>
     );

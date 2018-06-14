@@ -7,11 +7,14 @@ import { connect } from 'react-redux';
  * Local import
  */
 import XpBloc from 'src/components/CvUser/XpBloc';
-import { toggleGradAbstract, toggleExpAbstract } from 'src/store/reducer';
+import { toggleGradAbstract, toggleExpAbstract, deleteGrad, deleteExp } from 'src/store/reducer';
 
 /**
  * Code
  */
+const mapStateToProps = state => ({
+  togglePanel: state.togglePanel,
+});
 
 const mapDispatchToProps = dispatch => ({
   onToggleGradAbstract: id => () => {
@@ -20,10 +23,16 @@ const mapDispatchToProps = dispatch => ({
   onToggleExpAbstract: id => () => {
     dispatch(toggleExpAbstract(id));
   },
+  onDeleteGrad: id => () => {
+    dispatch(deleteGrad(id));
+  },
+  onDeleteExp: id => () => {
+    dispatch(deleteExp(id));
+  },
 });
 
 const XpBlocContainer = connect(
-  null, // Lecture depuis le state
+  mapStateToProps, // Lecture depuis le state
   mapDispatchToProps, // Écriture dans le state
 )(XpBloc);
 

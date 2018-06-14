@@ -29,6 +29,7 @@ class CvUser extends React.Component {
       <div>
         <div id="cv-builder-form" className={togglePanelClass}>
           <div id="panel-toggler" onClick={this.props.onTogglePanel} ><i className={switchIconPanel} /></div>
+          <h1 className="panel-title">Your CV Builder</h1>
           <ProfileForm className={togglePanelClass} />
           <GraduationForm className={togglePanelClass} />
           <ExperienceForm className={togglePanelClass} />

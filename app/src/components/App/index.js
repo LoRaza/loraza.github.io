@@ -1,7 +1,7 @@
 /**
  * NPM import
  */
-import React from 'react';
+import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 /**
  * Local import
@@ -16,21 +16,41 @@ import PortfolioBuilder from 'src/components/PortfolioBuilder';
 import ProfileBuilder from 'src/components/ProfileBuilder';
 import CvBlocsForm from 'src/components/CvBuilder/CvBlocsForm/CvBlocsForm';
 import CvUser from 'src/containers/CvUser';
+import { firebase } from 'src/firebase';
 /**
  * Code
  */
-const Home = () => (
-  <div>
-    <div className="bars">
-      <div className="bar bar-1" />
-      <div className="bar bar-2" />
-    </div>
-    <Header />
-    <Title />
-    <Intro2 />
-    <Footer />
-  </div>
-);
+class Home extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      authUser: null,
+    };
+  }
+  componentDidMount() {
+    firebase.auth.onAuthStateChanged(authUser => {
+      authUser
+        ? this.setState(() => ({ authUser }))
+        : this.setState(() => ({ authUser: null }));
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <div className="bars">
+          <div className="bar bar-1" />
+          <div className="bar bar-2" />
+        </div>
+        <Header authUser={this.state.authUser} />
+        <Title />
+        <Intro2 />
+        <Footer />
+      </div>
+    );
+  }
+}
 
 const App = () => (
   <div>

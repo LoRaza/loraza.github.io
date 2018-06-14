@@ -32,30 +32,43 @@ class ExperienceForm extends React.Component {
       <form
         className="form"
       >
-        <input
-          type="text"
-          name="expEntitled"
-          className="text-input entitled"
-          placeholder="Experience"
-          value={this.props.expEntitled}
-          onChange={this.handleExpChange}
-        />
-        <input
-          type="text"
-          name="expYear"
-          className="text-input year"
-          placeholder="Year"
-          value={this.props.expYear}
-          onChange={this.handleExpChange}
-        />
-        <input
-          type="text"
-          name="expAbstract"
-          className="text-input abstract"
-          placeholder="Skills Learned"
-          value={this.props.expAbstract}
-          onChange={this.handleExpChange}
-        />
+        <h2 className="builder-title">Experiences</h2>
+        <label htmlFor="expEntitled">
+          <span className="label-input-text">Entitled</span>
+          <input
+            id="expEntitled"
+            type="text"
+            name="expEntitled"
+            className="text-input entitled"
+            placeholder="Experience"
+            value={this.props.expEntitled}
+            onChange={this.handleExpChange}
+          />
+        </label>
+        <label htmlFor="expYear">
+          <span className="label-input-text">Year</span>
+          <input
+            id="expYear"
+            type="text"
+            name="expYear"
+            className="text-input year"
+            placeholder="Year"
+            value={this.props.expYear}
+            onChange={this.handleExpChange}
+          />
+        </label>
+        <label htmlFor="expAbstract">
+          <span className="label-input-text">Abstract</span>
+          <textarea
+            id="expAbstract"
+            type="text"
+            name="expAbstract"
+            className="text-input textarea-input"
+            placeholder="Skills Learned"
+            value={this.props.expAbstract}
+            onChange={this.handleExpChange}
+          />
+        </label>
         <button onClick={this.handleSubmit} className="button-add">Add experience</button>
       </form>
     );
