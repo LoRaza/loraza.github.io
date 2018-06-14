@@ -64,7 +64,7 @@ const Register = () => (
         Email
         <input type="mail" placeholder="Your Email adress" />
       </label>
-      <label>
+      <label id="register-password">
         Password
         <input type="password" placeholder="Your Password (8 char, caps and number minus....)" />
       </label>
