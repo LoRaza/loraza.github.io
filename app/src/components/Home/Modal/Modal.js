@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button';
 /**
  * Local import
  */
-import Register from '../RegisterForm';
+import RegisterForm from '../RegisterForm';
 
 /**
  * Code
@@ -65,7 +65,7 @@ class SimpleModal extends React.Component {
            onClose={this.handleClose}
          >
            <div >
-             <Register />
+             <RegisterForm />
            </div>
          </Modal>
        </div>

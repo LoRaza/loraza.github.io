@@ -2,7 +2,8 @@
  * NPM import
  */
 import React from 'react';
-
+import { NavLink } from 'react-router-dom';
+import classNames from 'classnames';
 /**
  * Local import
  */
@@ -15,37 +16,57 @@ import React from 'react';
 
 class Intro2 extends React.Component {
   state = {
-    color: '#fff',
-    paddingRight: '.5em',
+    cv: false,
+    portfolio: false,
   }
 
-  mouseEnter() {
+  mouseEnterPortfolio = () => {
     this.setState({
-      color: '#eb5d61',
-      paddingRight: '-2em',
+      cv: false,
+      portfolio: true,
     });
   }
 
-  mouseLeave() {
+  mouseLeavePortfolio = () => {
     this.setState({
-      color: '#fff',
-      paddingRight: '.5em',
+      cv: false,
+      portfolio: false,
+    });
+  }
+
+  mouseEnterCv = () => {
+    this.setState({
+      cv: true,
+      portfolio: false,
+    });
+  }
+
+  mouseLeaveCv = () => {
+    this.setState({
+      cv: false,
+      portfolio: false,
     });
   }
 
   render() {
+    const changeTitle = classNames('home-choice', {
+      'title-portfolio': this.state.portfolio,
+      'title-cv': this.state.cv,
+    });
     return (
       <div id="intro">
         <div className="box-intro-element create">
-          <div className="intro-element">
-            <img className="intro-element-create-pic" src="https://image.ibb.co/bUVctJ/home_cv.png" alt="" />
-          </div>
-          <p className="intro-element-title">CV</p>
+          <NavLink className="link-home" exact to="/testCV" onMouseEnter={this.mouseEnterCv} onMouseLeave={this.mouseLeaveCv}>
+            <div className="intro-element">
+              <img className="intro-element-create-pic" src="https://image.ibb.co/bUVctJ/home_cv.png" alt="" />
+            </div>
+            <p className="intro-element-title">CV</p>
+          </NavLink>
         </div>
         <div className="box-intro-element choice">
-          <h3 className="home-choice" style={{ color: this.state.color, paddingRight: this.state.paddingRight }}>Start Building</h3>
+          <h3 className={changeTitle}>Start Building</h3>
         </div>
-        <div className="box-intro-element discover" onClick={this.mouseEnter} onMouseLeave={this.mouseLeave}>
+        <div className="box-intro-element discover" onMouseEnter={this.mouseEnterPortfolio} onMouseLeave={this.mouseLeavePortfolio}>
           <div className="intro-element blue">
             <img className="intro-element-discover-pic" src="https://image.ibb.co/eyp97d/home_portfolio.png" alt="" />
           </div>

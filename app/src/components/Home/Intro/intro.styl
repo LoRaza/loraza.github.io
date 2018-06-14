@@ -77,5 +77,28 @@
 .intro-element:hover
   cursor: pointer
 
-.home-choice:hover
-  color: $color-tertiary !important
+.title-portfolio
+  font-size: 3em
+  color: $color-tertiary
+  text-align: center
+  padding-bottom: 2em
+  padding-left: 3em !important
+  animation: backforthRight .6s infinite
+
+.title-portfolio:after
+  content: "\2192"
+
+
+.title-cv
+  font-size: 3em
+  color: $color-primary
+  text-align: center
+  padding-bottom: 2em
+  padding-right: 3em !important
+  animation: backforthRight .6s infinite
+
+.title-cv:before
+  content: "\2190"
+
+
+@keyframes backforthRight{50%{-webkit-transform:translate3d(.15em,0,0);transform:translate3d(.15em,0,0)}}

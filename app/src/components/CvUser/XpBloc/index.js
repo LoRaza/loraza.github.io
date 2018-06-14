@@ -15,14 +15,24 @@ import classNames from 'classnames';
 
 
 const XpBloc = ({
-  id, entitled, year, abstract, onToggleAbstract, active,
+  entitled,
+  year,
+  abstract,
+  active,
+  id,
+  blocType,
+  onToggleGradAbstract,
+  onToggleExpAbstract,
+  onDeleteGrad,
+  onDeleteExp,
+  togglePanel,
 }) => {
   const showAbstractClass = classNames(
     'cv-bloc-abstract',
     { 'cv-bloc-abstract--show': active },
   );
   const switchIcon = classNames(active ? 'fas fa-chevron-circle-right' : 'fas fa-chevron-circle-down');
-
+  const showDeleteItem = classNames(togglePanel ? 'hide-delete-item' : 'delete-item');
   return (
     <div className="bloc-wrapper">
       <div className="cv-bloc-added">
@@ -32,7 +42,8 @@ const XpBloc = ({
         <p className="cv-bloc-year">
           {year}
         </p>
-        <div className="abstract-toggle"><i className={switchIcon} onClick={onToggleAbstract(id)} /></div>
+        <div className="abstract-toggle"><i className={switchIcon} onClick={blocType === 'graduation' ? onToggleGradAbstract(id) : onToggleExpAbstract(id)} /></div>
+        <div className={showDeleteItem}><i className="far fa-trash-alt" onClick={blocType === 'graduation' ? onDeleteGrad(id) : onDeleteExp(id)} /></div>
       </div>
       <div className={showAbstractClass}>
         {abstract}
@@ -42,12 +53,17 @@ const XpBloc = ({
 };
 
 XpBloc.propTypes = {
+  togglePanel: PropTypes.bool.isRequired,
+  onDeleteExp: PropTypes.func.isRequired,
+  onDeleteGrad: PropTypes.func.isRequired,
+  onToggleGradAbstract: PropTypes.func.isRequired,
+  onToggleExpAbstract: PropTypes.func.isRequired,
+  blocType: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   entitled: PropTypes.string.isRequired,
   year: PropTypes.string.isRequired,
   abstract: PropTypes.string,
   active: PropTypes.bool.isRequired,
-  onToggleAbstract: PropTypes.func.isRequired,
 };
 /**
  * Export
