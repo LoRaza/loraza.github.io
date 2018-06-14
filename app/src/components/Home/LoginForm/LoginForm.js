@@ -16,33 +16,29 @@ class loginForm extends Component {
   constructor() {
     super();
     this.state = { ...INITIAL_STATE };
-
   }
 
   onSubmit = (event) => {
-   const {
-     email,
-     password,
-   } = this.state;
+    const {
+      email,
+      password,
+    } = this.state;
 
-   const {
-     history,
-   } = this.props;
+    const {
+      history,
+    } = this.props;
 
-   auth.doSignInWithEmailAndPassword(email, password)
-     .then(() => {
-       this.setState(() => ({ ...INITIAL_STATE }));
-       history.push(routes.ACCOUNT);
-     })
-     .catch(error => {
-       this.setState(byPropKey('error', error));
-     });
+    auth.doSignInWithEmailAndPassword(email, password).then(() => {
+      this.setState(() => ({ ...INITIAL_STATE }));
+      history.push(routes.ACCOUNT);
+    }).catch((error) => {
+      this.setState(byPropKey('error', error));
+    });
 
-   event.preventDefault();
- }
+    event.preventDefault();
+  }
 
   render() {
-
     const {
       email,
       password,

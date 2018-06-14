@@ -28,41 +28,43 @@ const Header = ({ authUser }) =>
 
 const NavigationAuth = () =>
 
-(<header id="header">
-<TextField
-  id="search"
-  label="Search Profils"
-  type="search"
-  margin="none"
-/>
+  (
+    <header id="header">
+      <TextField
+        id="search"
+        label="Search Profils"
+        type="search"
+        margin="none"
+      />
 
-<div id="buttons">
-  <SignOutButton />
-  <SimpleModalWrapped id="signUp-button" />
-</div>
-<Avatar id="avatar" alt="USER" src="https://picsum.photos/200/300" />
-</header>
-);
+      <div id="buttons">
+        <SignOutButton />
+        <SimpleModalWrapped id="signUp-button" />
+      </div>
+      <Avatar id="avatar" alt="USER" src="https://picsum.photos/200/300" />
+    </header>
+  );
 
 const NavigationNonAuth = () =>
-(<header id="header">
-<TextField
-  id="search"
-  label="Search Profils"
-  type="search"
-  margin="none"
-/>
-<div id="buttons">
-  <Popover placement="bottom" content={content} trigger="click">
-    <Button variant="raised" color="primary" id="logIn-button">
-      Login
-    </Button>
-  </Popover>
-  <SimpleModalWrapped id="signUp-button" />
-</div>
-<Avatar id="avatar" alt="USER" src="https://picsum.photos/200/300" />
-</header>
-);
+  (
+    <header id="header">
+      <TextField
+        id="search"
+        label="Search Profils"
+        type="search"
+        margin="none"
+      />
+      <div id="buttons">
+        <Popover placement="bottom" content={content} trigger="click">
+          <Button variant="raised" color="primary" id="logIn-button">
+            Login
+          </Button>
+        </Popover>
+        <SimpleModalWrapped id="signUp-button" />
+      </div>
+      <Avatar id="avatar" alt="USER" src="https://picsum.photos/200/300" />
+    </header>
+  );
 /**
  * Export
  */
