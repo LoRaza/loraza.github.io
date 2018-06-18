@@ -54,52 +54,52 @@ class RegisterForm extends Component {
     username === '';
 
     return (
-        <div id="register-form">
-          <div className="align-right">
-            <FaClose
-             className="close"
+      <div id="register-form">
+        <div className="align-right">
+          <FaClose
+           className="close"
+          />
+          <form onSubmit={this.onSubmit}>
+            <input
+              value={username}
+              onChange={event => this.setState(byPropKey('username', event.target.value))}
+              type="text"
+              placeholder="Full Name"
             />
-            <form onSubmit={this.onSubmit}>
-        <input
-          value={username}
-          onChange={event => this.setState(byPropKey('username', event.target.value))}
-          type="text"
-          placeholder="Full Name"
-        />
-        <input
-          value={email}
-          onChange={event => this.setState(byPropKey('email', event.target.value))}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          value={passwordOne}
-          onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
-          type="password"
-          placeholder="Password"
-        />
-        <input
-          value={passwordTwo}
-          onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))}
-          type="password"
-          placeholder="Confirm Password"
-        />
-        <button disabled={isInvalid} type="submit">
-          Sign Up
-        </button>
+            <input
+              value={email}
+              onChange={event => this.setState(byPropKey('email', event.target.value))}
+              type="text"
+              placeholder="Email Address"
+            />
+            <input
+              value={passwordOne}
+              onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
+              type="password"
+              placeholder="Password"
+            />
+            <input
+              value={passwordTwo}
+              onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))}
+              type="password"
+              placeholder="Confirm Password"
+            />
+            <button disabled={isInvalid} type="submit">
+              Sign Up
+            </button>
 
-        { error && <p>{error.message}</p> }
-      </form>
-          </div>
-          <h2 className="form-title">Create your account to start building<br/> your CV or Portfolio</h2>
+            { error && <p>{error.message}</p> }
+          </form>
         </div>
+        <h2 className="form-title">Create your account to start building<br /> your CV or Portfolio</h2>
+      </div>
     );
   }
 }
 
 export default RegisterForm;
 
-{/* <form onSubmit={this.onSubmit}>
+/* <form onSubmit={this.onSubmit}>
   <div id="user-identity">
   <label id="firstname">
   Firstname
@@ -130,4 +130,4 @@ export default RegisterForm;
   </label>
   <button type="submit">Create account</button>
   { error && <p>{error.message}</p> }
-</form> */}
+</form> */

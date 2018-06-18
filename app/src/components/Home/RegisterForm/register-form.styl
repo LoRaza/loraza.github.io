@@ -1,16 +1,16 @@
 @require "app/styles/charte"
 
 #register-form
-  height: 50vh
-  width: calc(33vw + 1px)
+  box-sizing: content-box
+  width: 33vw
   border: 3px solid $color-primary
   position: fixed
-  top: 20vh
-  left: calc(33vw - 1px)
+  top: 10%
+  left: calc(33vw - 3px - 2em)
   padding: 2em
   text-align: left
   background-color: $color-secondary
-  border-radius: 3px
+  border-radius: 10px
 
 .align-right
   text-align: right
@@ -27,6 +27,12 @@
   margin-bottom: 2em
   text-align: center
   color: $color-primary
+
+#register-mail
+  width 100%
+
+#register-password
+  width 100%
 
 input
   display: block;
