@@ -6,6 +6,7 @@ import React from 'react';
 // import anime from 'animejs';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 /**
  * Local import
  */
@@ -27,6 +28,9 @@ class CvUser extends React.Component {
     const toggleCvClass = classNames({ 'toggle-cv': this.props.togglePanel });
     return (
       <div>
+        <NavLink exact to="/">
+          <div id="back-home">Home</div>
+        </NavLink>
         <div id="cv-builder-form" className={togglePanelClass}>
           <div id="panel-toggler" onClick={this.props.onTogglePanel} ><i className={switchIconPanel} /></div>
           <h1 className="panel-title">Your CV Builder</h1>
