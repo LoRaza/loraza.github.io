@@ -41,6 +41,37 @@ const initialState = {
       active: false,
     },
   ],
+      slides: [
+        {
+          city: 'Test',
+          country: 'Test',
+          img: 'https://picsum.photos/2000/1333/?image=1032',
+        },
+        {
+          city: 'Test',
+          country: 'Test-Land',
+          img: 'https://picsum.photos/2000/1333/?image=1027',
+        },
+        {
+          city: 'Test',
+          img: 'https://picsum.photos/2000/1333/?image=1028',
+        },
+        {
+          city: 'Test',
+          country: 'Test',
+          img: 'https://picsum.photos/2000/1333/?image=1044',
+        },
+        {
+          city: 'Test',
+          country: 'Test',
+          img: 'https://picsum.photos/2000/1333/?image=1074',
+        },
+        {
+          city: 'Test',
+          country: 'Test',
+          img: 'https://picsum.photos/2000/1333/?image=1069',
+        },
+      ],
   experiences: [
     {
       id: 1,
