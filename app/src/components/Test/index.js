@@ -140,14 +140,12 @@ class Collection extends React.Component {
   componentDidMount() {
     // this._getCategories(); // Codepen switched to HTTPS, so I have to load JSON manually instead of the json-generator
     this.setState({
-      categories: [{"thumbnail":"https://unsplash.it/1200/1200","link":"http://seanma.de","taxonomy":"category","count":6,"name":"test","slug":"test","id":"586537da62981d5fb8c21617"},{"thumbnail":"https://unsplash.it/1200/1201","link":"http://seanma.de","taxonomy":"category","count":8,"name":"test","slug":"test","id":"586537da60c040bc1e3060a1"},{"thumbnail":"https://unsplash.it/1200/1202","link":"http://seanma.de","taxonomy":"category","count":3,"name":"test","slug":"test","id":"586537daffc67c66ec4dc356"},{"thumbnail":"https://unsplash.it/1200/1203","link":"http://seanma.de","taxonomy":"category","count":6,"name":"test","slug":"test","id":"586537dae1be34396786ce5f"},{"thumbnail":"https://unsplash.it/1200/1204","link":"http://seanma.de","taxonomy":"category","count":2,"name":"test","slug":"test","id":"586537dab274a22da2f3edae"}]
+      categories: [{"thumbnail":"https://picsum.photos/1300/1200/?random"},
+      {"thumbnail":"https://picsum.photos/1200/1200/?random"},
+      {"thumbnail":"https://picsum.photos/1350/1200/?random"},
+      {"thumbnail":"https://picsum.photos/1250/1200/?random"},
+      {"thumbnail":"https://picsum.photos/1400/1200/?random"}]
     })
-  }
-  _getCategories() {
-    let _this = this
-    let url = 'http://beta.json-generator.com/api/json/get/E1NpHQAEf';
-    fetch(url).then( response => response.json() )
-    .then( json => { _this.setState({ categories: json }) })
   }
   _handleClick(i){
     this.setState({

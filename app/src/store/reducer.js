@@ -43,33 +43,33 @@ const initialState = {
   ],
       slides: [
         {
-          city: 'Test',
+          city: 'Test1',
           country: 'Test',
-          img: 'https://picsum.photos/2000/1333/?image=1032',
+          img: 'https://picsum.photos/2000/1336/?random',
         },
         {
-          city: 'Test',
+          city: 'Test2',
           country: 'Test-Land',
-          img: 'https://picsum.photos/2000/1333/?image=1027',
+          img: 'https://picsum.photos/2000/1335/?random',
         },
         {
-          city: 'Test',
-          img: 'https://picsum.photos/2000/1333/?image=1028',
+          city: 'Test3',
+          img: 'https://picsum.photos/2000/1331/?random',
         },
         {
-          city: 'Test',
+          city: 'Test4',
           country: 'Test',
-          img: 'https://picsum.photos/2000/1333/?image=1044',
+          img: 'https://picsum.photos/2000/1334/?random',
         },
         {
-          city: 'Test',
+          city: 'Test5',
           country: 'Test',
-          img: 'https://picsum.photos/2000/1333/?image=1074',
+          img: 'https://picsum.photos/2000/1333/?random',
         },
         {
-          city: 'Test',
+          city: 'Test6',
           country: 'Test',
-          img: 'https://picsum.photos/2000/1333/?image=1069',
+          img: 'https://picsum.photos/2000/1332/?random',
         },
       ],
   experiences: [
