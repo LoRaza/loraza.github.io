@@ -13,7 +13,7 @@ import React from 'react';
  */
 const Title = () => (
   <div id="main-title">
-    <h1><strong>AIM</strong> HIGHER</h1>
+    <h1 className="big-title"><strong>AIM</strong> HIGHER</h1>
     <h2 className="baseline">Your online CV & Portfolio</h2>
   </div>
 );

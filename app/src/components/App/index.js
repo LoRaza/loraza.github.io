@@ -8,7 +8,7 @@ import { Route } from 'react-router-dom';
  */
 
 import Header from 'src/components/Home/Header/Header';
-import Intro from 'src/components/Home/Intro';
+import HomeIntro from 'src/components/Home/HomeIntro';
 import Title from 'src/components/Home/Title';
 import Footer from 'src/components/Home/Footer';
 import CvBuilder from 'src/components/CvBuilder';
@@ -46,7 +46,7 @@ class Home extends Component {
         </div>
         <Header authUser={this.state.authUser} />
         <Title />
-        <Intro />
+        <HomeIntro />
         <Footer />
       </div>
     );
