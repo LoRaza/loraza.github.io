@@ -3,13 +3,17 @@
 .cv-bloc-profile
   width: 752px
   display: flex
-  background-color: #fff
+  background: linear-gradient(to top, $color-secondary , #EBEBEB );
   box-shadow:inset 0px 0px 0px 3px $color-secondary
   flex-direction: row
   justify-content: flex-start
   margin-bottom: 2em
   color: $color-primary
   padding: 1.5em
+
+.cv-bloc-profile:hover
+  background: linear-gradient(to bottom, $color-secondary , #EBEBEB )
+  transition: 2000ms
 
 .cv-picture-bloc
   margin: 0 5em
@@ -26,7 +30,7 @@
     justify-content: flex-end
 
 .profile-info
-  color: $color-secondary
+  color: $color-tertiary
   margin-left: .5em
 
 .info-wrapper

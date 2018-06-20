@@ -66,11 +66,13 @@ class Intro2 extends React.Component {
         <div className="box-intro-element choice">
           <h3 className={changeTitle}>Start Building</h3>
         </div>
-        <div className="box-intro-element discover" onMouseEnter={this.mouseEnterPortfolio} onMouseLeave={this.mouseLeavePortfolio}>
-          <div className="intro-element">
-            <img className="intro-element-discover-pic" src="https://image.ibb.co/eyp97d/home_portfolio.png" alt="" />
-          </div>
-          <p className="intro-element-title">Portfolio</p>
+        <div className="box-intro-element discover">
+          <NavLink className="link-home" exact to="/projects" onMouseEnter={this.mouseEnterPortfolio} onMouseLeave={this.mouseLeavePortfolio}>
+            <div className="intro-element">
+              <img className="intro-element-discover-pic" src="https://image.ibb.co/eyp97d/home_portfolio.png" alt="" />
+            </div>
+            <p className="intro-element-title">Portfolio</p>
+          </NavLink>
         </div>
       </div>
     );

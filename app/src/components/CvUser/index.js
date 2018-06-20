@@ -26,8 +26,13 @@ class CvUser extends React.Component {
     const switchIconPanel = classNames(this.props.togglePanel ? 'fas fa-angle-right' : 'fas fa-angle-left');
     const togglePanelClass = classNames({ 'toggle-panel': this.props.togglePanel });
     const toggleCvClass = classNames({ 'toggle-cv': this.props.togglePanel });
+    const showBars = classNames(this.props.togglePanel ? 'bars-show' : 'bars-hide');
     return (
       <div>
+        <div className={showBars}>
+          <div className="bar bar-1" />
+          <div className="bar bar-2" />
+        </div>
         <NavLink exact to="/">
           <div id="back-home">Home</div>
         </NavLink>

@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 /**
  * Local import
  */
@@ -17,16 +18,23 @@ const GraduationBloc = ({ graduations }) => (
       <div className="cv-bloc-icon"><i className="fas fa-graduation-cap" /></div>
       <h3 className="cv-section-title">Graduations</h3>
     </div>
-    <div className="xp-bloc-container">
+    <TransitionGroup className="xp-bloc-container">
       {graduations.map(graduation => (
-        <XpBloc
+        <CSSTransition
           key={graduation.id}
-          {...graduation}
-          blocType="graduation"
-        />
+          timeout={500}
+          classNames="fade"
+        >
+          <XpBloc
+            key={graduation.id}
+            {...graduation}
+            blocType="graduation"
+          />
+        </CSSTransition>
       ))}
-    </div>
+    </TransitionGroup>
   </div>
+
 );
 
 GraduationBloc.propTypes = {
@@ -39,8 +47,8 @@ GraduationBloc.propTypes = {
 export default GraduationBloc;
 
 
-// const GraduationBloc = ({ graduations, onToggleAbstract }) => (
-//   <div id="cv-bloc">
+// const GraduationBloc = ({ graduations }) => (
+//   <div className="cv-bloc">
 //     <div className="cv-bloc-title">
 //       <div className="cv-bloc-icon"><i className="fas fa-graduation-cap" /></div>
 //       <h3 className="cv-section-title">Graduations</h3>
@@ -50,14 +58,9 @@ export default GraduationBloc;
 //         <XpBloc
 //           key={graduation.id}
 //           {...graduation}
-//           onToggleAbstract={onToggleAbstract}
+//           blocType="graduation"
 //         />
 //       ))}
 //     </div>
 //   </div>
 // );
-//
-// GraduationBloc.propTypes = {
-//   graduations: PropTypes.arrayOf(PropTypes.object).isRequired,
-//   onToggleAbstract: PropTypes.func.isRequired,
-// };

@@ -17,8 +17,13 @@
   margin: 1em
   border-radius: 25px
   background: $color-secondary
-  border: 3px solid $color-primary
+  border: 3px solid $color-tertiary
   padding:0 2em 0 2em
+  color: $color-tertiary
+
+#logIn-button:hover
+  background-color $color-tertiary
+  color: $color-secondary
 
 #avatar
   float:left
@@ -29,7 +34,7 @@
 #login-form
   position: absolute
   top: -4em
-  left: 57%
+  left: 62%
   width: 400px
 
 #search
@@ -42,6 +47,9 @@
 
 .MuiSvgIcon-root-154
   fill: #fff !important
+
+.MuiFormControl-root-4
+  outline: none
 
 .MuiInput-focused-17
   border-bottom: 1px solid $color-primary !important

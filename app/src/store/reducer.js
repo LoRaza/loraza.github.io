@@ -41,37 +41,37 @@ const initialState = {
       active: false,
     },
   ],
-      slides: [
-        {
-          city: 'Test1',
-          country: 'Test',
-          img: 'https://picsum.photos/2000/1336/?random',
-        },
-        {
-          city: 'Test2',
-          country: 'Test-Land',
-          img: 'https://picsum.photos/2000/1335/?random',
-        },
-        {
-          city: 'Test3',
-          img: 'https://picsum.photos/2000/1331/?random',
-        },
-        {
-          city: 'Test4',
-          country: 'Test',
-          img: 'https://picsum.photos/2000/1334/?random',
-        },
-        {
-          city: 'Test5',
-          country: 'Test',
-          img: 'https://picsum.photos/2000/1333/?random',
-        },
-        {
-          city: 'Test6',
-          country: 'Test',
-          img: 'https://picsum.photos/2000/1332/?random',
-        },
-      ],
+  slides: [
+    {
+      city: 'Project 1',
+      country: 'Some cool stuff',
+      img: 'https://picsum.photos/2000/1336/?random',
+    },
+    {
+      city: 'Project 2',
+      country: 'Nice coding thing',
+      img: 'https://picsum.photos/2000/1335/?random',
+    },
+    {
+      city: 'Project 3',
+      img: 'https://picsum.photos/2000/1331/?random',
+    },
+    {
+      city: 'Project 4',
+      country: 'More cool stuff',
+      img: 'https://picsum.photos/2000/1334/?random',
+    },
+    {
+      city: 'Project 5',
+      country: 'Another hitting thing',
+      img: 'https://picsum.photos/2000/1333/?random',
+    },
+    {
+      city: 'Project 6',
+      country: 'Again and again',
+      img: 'https://picsum.photos/2000/1332/?random',
+    },
+  ],
   experiences: [
     {
       id: 1,

@@ -1,7 +1,7 @@
 @require "app/styles/charte"
 
 a,h1,h2,h3,h4,h5,h6 {
-  color: white;
+  color: $color-tertiary;
 }
 
 a:hover, a:hover > * {
@@ -26,6 +26,24 @@ ul.categories {
     position: relative;
 }
 
+#back-home-collection
+  position: absolute
+  z-index: 1000
+  display: block
+  top: 90vh
+  left: 50vw
+  border: 3px solid $color-primary
+  width: 120px
+  height: 40px
+  background-color: $color-secondary
+  color: $color-primary
+  border-radius: 30px
+  line-height: 2em
+  cursor: pointer
+
+#back-home-collection:hover
+  background-color: $color-primary
+  color: $color-secondary
 
 /*content*/
 

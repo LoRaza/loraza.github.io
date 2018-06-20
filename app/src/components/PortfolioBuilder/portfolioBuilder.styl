@@ -1,15 +1,18 @@
+@require "app/styles/charte"
+
 *, *:before, *:after {
     box-sizing: border-box
     margin: 0
     padding: 0
   }
 
-  
+
   .slider {
     overflow: hidden
     position: relative
     height: 80vh
     color: #fff
+    box-shadow: 0 0 50px 3px rgba($text, .7)
   }
   .slider__top-heading {
     z-index: 12
@@ -76,6 +79,7 @@
     opacity: 0
     -webkit-transition: 0.5s
     transition: 0.5s
+    color: $color-secondary
   }
   .slider__slide.s--active .slider__slide-subheading {
     -webkit-transition-delay: 0.65s
@@ -91,6 +95,8 @@
     margin-bottom: 20px
     font-size: 60px
     letter-spacing: 12px
+    color: $color-primary
+
   }
   .slider__slide-heading span {
     display: block
@@ -99,6 +105,7 @@
             transform: translateY(-60px)
     -webkit-transition: all 0.33333s
     transition: all 0.33333s
+    text-shadow: rgba(#222, .80) 1px 0 30px
   }
   .slider__slide.s--prev .slider__slide-heading span {
     -webkit-transform: translateY(60px)
@@ -391,7 +398,7 @@
             transform: translateX(0)
     opacity: 1
   }
-  
+
   .icon-link {
     z-index: 100
     position: absolute

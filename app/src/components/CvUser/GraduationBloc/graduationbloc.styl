@@ -3,10 +3,10 @@
 .cv-bloc
   width: 752px
   display: flex
-  background-color: #fff
+  background: linear-gradient(to bottom left, $color-primary , #ac2d46 );
   flex-direction: column
   margin-bottom: 2em
-  color: $color-primary
+  color: $color-secondary
   border-radius: 5px
 
 .cv-bloc-title
@@ -15,6 +15,7 @@
   border: 3px solid $color-secondary
   padding: 1em
 
+
 .cv-bloc-icon
   padding-left: 2em
   margin-right: 1em
@@ -22,6 +23,7 @@
 
 .cv-section-title
   font-size: 2em
+  color: $color-secondary !important
 
 .xp-bloc-container
   width: 100%
@@ -29,3 +31,21 @@
   flex-direction: row
   flex-wrap: wrap
   background-color: $color-secondary
+
+.experience
+  background: linear-gradient(to bottom left, #24497f , $color-tertiary );
+
+.fade-enter {
+  opacity: 0.01;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in;
+}

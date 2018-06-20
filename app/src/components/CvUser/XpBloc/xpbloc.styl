@@ -1,13 +1,34 @@
 @require "app/styles/charte"
 
 .cv-bloc-added
-  width: 250px
+  width: 246px
   height: 110px
   box-shadow:inset 0px 0px 0px 3px $color-secondary
   padding: 1em
-  background-color: #fff
-  color: $color-secondary
+  background: linear-gradient(to right, #EFEFEF , #EBEBEB );
+  color: $text
   box-sizing: border-box
+
+.cv-bloc-added:hover
+  background: linear-gradient(to bottom left, #FEFEFE , #EBEBEB )
+  transition: 700ms
+
+.bloc-wrapper:before
+  content: ''
+  border: 2px solid $color-tertiary
+  height: 104px
+  top: 3px
+  position: relative
+  left: 3px
+
+.bloc-wrapper-grad:before
+  content: ''
+  border: 2px solid $color-primary
+  height: 104px
+  top: 3px
+  position: relative
+  left: 3px
+
 
 .cv-bloc-entitled
   font-size: 1em
@@ -19,13 +40,14 @@
   font-weight: 200
   font-style: italic
   margin-bottom: .5em
+  color: $color-tertiary
 
 .cv-bloc-abstract
   padding: 1em
   font-family: 'Fira Sans', sans-serif
   font-weight: 300
   display: none
-  color: $text
+  color: $color-tertiary
   text-align: justify
 
 .abstract-toggle
@@ -34,12 +56,14 @@
 
 .cv-bloc-abstract--show
   display: block
+  opacity: 1
   width: 500px
   box-shadow:inset 0px 0px 0px 3px $color-secondary
-  background-color $color-primary
+  background: linear-gradient(to left, $color-secondary , #EBEBEB );
+  transition: 700ms
 
 
-.bloc-wrapper
+.bloc-wrapper, .bloc-wrapper-grad
   min-width: 250px
   max-width: 750px
   display: flex
@@ -56,4 +80,4 @@
   left: 0px
 
 .delete-item:hover
-    color: $color-secondary
+    color: $text

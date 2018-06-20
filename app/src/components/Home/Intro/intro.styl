@@ -48,7 +48,7 @@
   background-color: $color-primary
 
 .blue
-  background-color: $color-tertiary !important
+  background-color: $color-primary !important
 
 .title-blue
   color: $color-tertiary !important
@@ -57,13 +57,35 @@
   position: absolute
   left: calc(33% - 125px)
 
+
 .share
   position: absolute
   left: calc(50% - 106px)
 
+
 .discover
   position: absolute
   left: calc(66% - 77px)
+
+
+.create-intro
+  position: absolute
+  left: calc(33% - 125px)
+  opacity: 0
+
+.share-intro
+  position: absolute
+  left: calc(50% - 106px)
+  opacity: 0
+
+.discover-intro
+  position: absolute
+  left: calc(66% - 77px)
+  opacity: 0
+
+.appear-bloc
+  opacity: 1
+  transition: 700ms
 
 .choice
   flex: 1
@@ -72,10 +94,10 @@
 
 .home-choice
   font-size: 3em
-  color: $text
+  color: $color-tertiary
   text-align: center
   padding-bottom: 2em
-  padding-right: .5em //Fix pour centrer visuellement
+  padding-right: .8em //Fix pour centrer visuellement
 
 .intro-element:hover
   cursor: pointer

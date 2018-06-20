@@ -62,7 +62,7 @@ const App = () => (
       <Route path="/profilebuilder" component={ProfileBuilder} />
       <Route path="/cvblocsform" component={CvBlocsForm} />
       <Route path="/testcv" component={CvUser} />
-      <Route path="/Test" component={Collection} />
+      <Route path="/projects" component={Collection} />
     </div>
   </div>
 

@@ -4,6 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+
 /**
  * Local import
  */
@@ -33,8 +34,9 @@ const XpBloc = ({
   );
   const switchIcon = classNames(active ? 'fas fa-chevron-circle-right' : 'fas fa-chevron-circle-down');
   const showDeleteItem = classNames(togglePanel ? 'hide-delete-item' : 'delete-item');
+  const customBloc = classNames(blocType === 'graduation' ? 'bloc-wrapper-grad' : 'bloc-wrapper');
   return (
-    <div className="bloc-wrapper">
+    <div className={customBloc}>
       <div className="cv-bloc-added">
         <p className="cv-bloc-entitled">
           {entitled}

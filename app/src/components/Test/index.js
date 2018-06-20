@@ -49,7 +49,7 @@ class ProjectCategory extends React.Component {
   componentWillMount() {
     // this.getProjects(); // Codepen switched to HTTPS, so I have to load JSON manually instead of the json-generator
     this.setState({
-    
+
     })
   }
   getProjects() {
@@ -69,7 +69,7 @@ class ProjectCategory extends React.Component {
       let { active, focused, shiftLeft, isLast } = this.props
 
       let styles = {
-        container: { 
+        container: {
           transform: (function() {
               return active
                   ? 'scale(1.1) translate3d(0, 0, 0)'
@@ -97,12 +97,12 @@ class ProjectCategory extends React.Component {
                     <ul className="menu vertical">
                       <li>
                         <a>
-                          <h3 className="projectlist--client">test</h3>
+                          <h3 className="projectlist--client">Project 1</h3>
                         </a>
                       </li>
                       <li>
                         <Link exact to="/PortfolioBuilder" >
-                          <p>Description</p>
+                          <p>View Project</p>
                         </Link>
                       </li>
                     </ul>
@@ -193,6 +193,9 @@ class Collection extends React.Component {
           {catNodes}
         </ul>
       </div>
+    <Link exact to="/">
+      <div id="back-home-collection">Home</div>
+    </Link>
     </div>
     )
   }

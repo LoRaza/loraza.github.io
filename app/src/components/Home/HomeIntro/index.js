@@ -24,21 +24,21 @@ class HomeIntro extends React.Component {
     hideShit: false
   });
 
-  changeIntro(){
-    setTimeout(() => {
-      this.setState({
-        introHide: false,
-        hideShit: true,
-      })
-    }, 2600)
-  }
   componentDidMount() {
     this.loaderTween = TweenLite.to(this.loaderWrap, 1, {
-        x: "100%", ease: Expo.easeInOut, delay: 2, duration: 2
+      ease: Expo.easeOut, delay: 5, duration: 1, opacity: 0, scale: '0.1',
     });
     this.changeIntro();
   }
 
+  changeIntro() {
+    setTimeout(() => {
+      this.setState({
+        introHide: false,
+        hideShit: true,
+      });
+    }, 5500);
+  }
 
   render() {
     const introHide = classNames({ 'intro-hide': this.state.introHide });
